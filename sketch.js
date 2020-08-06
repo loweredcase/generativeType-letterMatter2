@@ -125,7 +125,8 @@ function draw() {
 function Rectangle(x, y, w, h, poem) {
   var options = {
     friction: .8,
-    restitution: .4
+    restitution: .4,
+    frictionAir: random(.07, .3)
     //density: .001
   }
 
