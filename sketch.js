@@ -56,6 +56,7 @@ function setup() {
   //nextWordTime = engine.timing.timestamp
   // Make Everything Float:
   engine.world.gravity.y = -1
+  engine.world.gravity.x = random(-.75, -.2)
 
 
   // make a floor (new Boundary (x, y, width, height, angle)
@@ -89,8 +90,8 @@ function draw() {
     if (engine.timing.timestamp >= nextWordTime){
       nextWordTime = engine.timing.timestamp + (800 + random(-100, 100))
       wordBlock.push(new Rectangle(
-        windowWidth/2,
-        (windowHeight/2) + random(-200, 200),
+        (windowWidth - 300) - random(0, 100),
+        windowHeight - random(100, 300),
         this.w,
         this.h,
         word[poemI]
